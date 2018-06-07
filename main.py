@@ -53,20 +53,6 @@ def validate(to_validate):  # 올바른 입력이면 True를 반환, 반대는 F
     return True
 
 
-def check_num(postfix):  # 연산자와 피연산자의 개수를 비교합니다
-    operator_num = 0
-    operand_num = 0
-    for i in postfix:
-        if i in "+-*/":
-            operator_num += 1
-        elif i in "1234567890":
-            operand_num += 1
-    if operator_num >= operand_num:
-        print('연산자의 개수가 피연산자의 개수보다 많습니다')
-        return False
-    return True
-
-
 def print_postfix(postfix):  # Postfix로 변환된 수식을 출력합니다
     postfix_str = ''
     for tmp in postfix:
